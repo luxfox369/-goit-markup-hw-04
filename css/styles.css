@@ -155,8 +155,8 @@ a {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
 }
 /* Навігація по сторінках сайта */
 /* навігація  в header  flex container*/
@@ -193,22 +193,22 @@ a {
   justify-content: center;
   align-items: center;
 }
-
-.contact-icon {
-  fill: #757575;
-}
-/* hover на контакти в header */
-.header-contact-item:hover .contact-icon,
-.header-contact-item:focus .contact-icon {
-  color: var(--accent-color--);
-  fill: var(--accent-color--);
-}
-
 /* вигляд мейл і телефон */
 .header-contact-link {
   color: var(--text-color--);
   padding: 32px 0px;
 }
+/* колір  від  link-батька */
+.contact-icon {
+  fill: currentColor;
+}
+/* hover на контакти в header */
+.header-contact-link:hover .contact-icon,
+.header-contact-link:focus .contact-icon {
+  color: var(--accent-color--);
+  fill: var(--accent-color--);
+}
+
 /* реакція на наведення на елемент списка посилання  */
 .header-nav-link:focus,
 .header-nav-link:hover,
@@ -224,7 +224,12 @@ a {
 .hero-section {
   color: var(--prime-bg-color--); /*білий*шрифт */
   background: var(--second-bg-color--);
-  background-image: url("../images/hero-overlay.svg"), url("../images/hero.jpg");
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -333,7 +338,6 @@ a {
   background: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-bottom: 94px;
 }
 
 .team-title.title-second {
@@ -397,10 +401,15 @@ a {
 
 /* кругла кнопка на соцмережі */
 .social-link-button {
-  display: block;
+  /* display: block; */
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  padding: 12px;
-  color:var(--icon-color--);
+  /* padding: 12px; */
+  color: var(--icon-color--);
 }
 /* колір іконка соцмереж наслідує від кнопки-батька*/
 .social-link-icon {
@@ -410,11 +419,14 @@ a {
 .social-link-button:hover,
 .social-link-button:focus {
   background-color: var(--accent-color--);
-  color:var(--prime-bg-color--);
+  color: var(--prime-bg-color--);
 }
 
 /* секція Постійні клієнти */
-
+.client-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .title-client {
   padding-bottom: 50px;
 }
@@ -423,29 +435,28 @@ a {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding-bottom: 94px;
 }
-.client-item {
+
+.client-link {
+  display: flex;
   width: 170px;
   height: 92px;
-}
-.client-link {
-  display: block;
-  border-radius: 4px;
-  margin: 16px 32px;
-  color:var(--icon-color--);
+  justify-content: center;
+  align-items: center;
+  /* margin: 16px 32px; */
+  color: var(--icon-color--);
   border: 1px solid var(--icon-color--);
+  border-radius: 4px;
 }
- .client-icon {
+.client-icon {
   fill: currentColor;
 }
 
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-color--);
-  color:var(--accent-color--);
-} 
-
+  color: var(--accent-color--);
+}
 
 /* porfolio section */
 /* h1 Портфоліо -title-first схований */
@@ -532,7 +543,6 @@ a {
   background: #ffffff;
   /* flex-basis: calc((100%-30px * 2) / 3); */
   margin-bottom: 30px;
- 
 }
 .project-item:hover,
 .project-item:focus {
@@ -602,33 +612,30 @@ a {
 .footer-combine {
   display: flex;
   gap: 70px;
-  align-items:baseline;
+  align-items: baseline;
 }
 .social-text {
-  color:var(--prime-bg-color--);
+  color: var(--prime-bg-color--);
   font-weight: 700;
   font-size: 14px;
-  line-height:calc( 16 / 14);
+  line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
- 
 }
 .footer-right {
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  align-content:flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-content: flex-start;
 }
-.social-link-list.footer{
-  margin-right:0px;
-  margin-left:0px;
+.social-link-list.footer {
+  margin: 0 auto;
 }
-.social-link-button.footer{
-  color:var(--prime-bg-color--);
-background: rgba(255, 255, 255, 0.1);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.social-link-button.footer {
+  color: var(--prime-bg-color--);
+  background: rgba(255, 255, 255, 0.1);
 }
 .social-link-button.footer:hover,
-.social-link-button.footer:focus{
+.social-link-button.footer:focus {
   background-color: var(--accent-color--);
 }
