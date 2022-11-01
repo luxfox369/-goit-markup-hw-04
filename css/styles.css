@@ -187,29 +187,30 @@ a {
 /* .header-contact-item:not(:first-child) {
   margin-left: 30px;
 } */
-.header-contact-item {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
+
 /* вигляд мейл і телефон */
 .header-contact-link {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-color--);
   padding: 32px 0px;
+  gap:10px;
 }
 /* колір  від  link-батька */
 .contact-icon {
+  display:block;
   fill: currentColor;
-}
-/* hover на контакти в header */
-.header-contact-link:hover .contact-icon,
-.header-contact-link:focus .contact-icon {
-  color: var(--accent-color--);
+ }
+/* hover/focus на контакти в header */
+.header-contact-link:focus ,
+.header-contact-link:hover .contact-icon {
+ 
   fill: var(--accent-color--);
+  color:var(--accent-color--);
 }
 
-/* реакція на наведення на елемент списка посилання  */
+/* hover на посиланнях в навігації */
 .header-nav-link:focus,
 .header-nav-link:hover,
 .header-contact0link:focus,
@@ -428,7 +429,7 @@ a {
   padding-bottom: 94px;
 }
 .title-client {
-  padding-bottom: 50px;
+  margin-bottom:50px;
 }
 .client-list {
   display: flex;
